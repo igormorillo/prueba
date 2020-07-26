@@ -2,12 +2,9 @@
 
 _App to consume webpage, scrape it and return json array with all the product options on the pages_
 
-## Comenzando
+## How to donwload
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Deployment** para conocer como desplegar el proyecto.
-
+*[Download from github](https://github.com/igormorillo/prueba)
 
 ### Pre-requisites
 
@@ -48,38 +45,38 @@ composer install
 _After all downloads, try executing PHPUnit by running (the first time you run this, it will download PHPUnit itself and make its classes available in your app):_
 
 ```
-.php /bin/phpunit
+php bin/phpunit
 ```
 
 ## Testing
 
  _How to test?_
 
-_Testing for Helper functions_
+_Testing for Helper function_
 
 ```
 php bin/phpunit tests/Helper/CommandHelperTest.php
 ```
-
-### Analice las pruebas end-to-end
-
-_Explica que verifican estas pruebas y por qué_
-
+_If you want to generate new testing, you can do it by adding new lines to the .txt file where are located._
 ```
-Da un ejemplo
+tests\Helper\Files\getNumberPart.txt 
 ```
 
-### Y las pruebas de estilo de codificación
-
-_Explica que verifican estas pruebas y por qué_
+_The file info is defined as..._
 
 ```
-Da un ejemplo
+inserted_value;expected_result 
 ```
 
-## Despliegue
+## Execution
 
-_Agrega notas adicionales sobre como hacer deploy_
+ _How to execute application?_
+
+_On your console, under the folder the project is located at, execute:_
+
+```
+php bin/console prueba:scrape
+```
 
 ## Made with
 
@@ -89,11 +86,5 @@ _Agrega notas adicionales sobre como hacer deploy_
 ## Authors
 
 * **Igor Morillo** - [imorillo](https://github.com/igormorillo)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
-
-## Licencia
-
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
 
 ---

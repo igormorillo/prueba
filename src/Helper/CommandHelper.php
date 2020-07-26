@@ -7,7 +7,7 @@ namespace App\Helper;
 class CommandHelper
 {
     /**
-     * Function that extracts the number from a given string
+     * Function that extracts the number from a given string.
      *
      * @param string $string
      */
@@ -16,7 +16,7 @@ class CommandHelper
         // we strip all , from thousands
         $string = str_replace(',', '', $string);
         preg_match('!\d+\.*\d*!', $string, $matches);
+
         return floatval($matches[0]);
     }
-
 }

@@ -46,7 +46,7 @@ class scrapeCommand extends Command
     protected function configure()
     {
         $this
-            ->setDescription('Scrape website')
+            ->setDescription('Scrape Command')
         ;
     }
 
@@ -87,7 +87,7 @@ class scrapeCommand extends Command
             return $a['price'] < $b['price'];
         });
         echo json_encode($results);
+
         return 0;
     }
-
 }
