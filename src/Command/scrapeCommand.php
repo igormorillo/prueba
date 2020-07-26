@@ -10,7 +10,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\DomCrawler\Crawler;
-use Symfony\Component\HttpClient\HttpClient;
 
 class scrapeCommand extends Command
 {
@@ -56,11 +55,11 @@ class scrapeCommand extends Command
 
         // Create a Goutte Client instance.
         /** @var Client $client */
-        $client = new Client(HttpClient::create(['timeout' => 60]));
+        $client = new Client();
 
         // we get the page
         /** @var Crawler $crawler */
-        $crawler = $client->request('GET', 'https://videx.comesconnected.com');
+        $crawler = $client->request('GET', $this->parameterBag->get('url'));
 
         // we get each package
         $packages = $crawler->filter('.package')->each(function ($node) {
